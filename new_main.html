@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>네이버 : 회원가입</title>
         <link rel="stylesheet" href="new_main.css">
+        
     </head>
     <body>
         <!-- header -->
@@ -19,7 +20,7 @@
             <div id="content">
 
                 <!-- ID -->
-                <div class="join_row">
+                <div>
                     <h3 class="join_title">
                         <label for="id">아이디</label>
                     </h3>
@@ -27,42 +28,42 @@
                         <input type="text" id="id" class="int" maxlength="20">
                         <span class="step_url">@naver.com</span>
                     </span>
-                    <span class="error_next_box" id="idMsg">필수 정보입니다.</span>
+                    <span class="error_next_box"></span>
                 </div>
 
                 <!-- PW1 -->
-                <div class="join_row">
+                <div>
                     <h3 class="join_title"><label for="pswd1">비밀번호</label></h3>
                     <span class="box int_pass">
                         <input type="text" id="pswd1" class="int" maxlength="20">
                         <span id="alertTxt">사용불가</span>
                         <img src="m_icon_pass.png" id="pswd1_img1" class="pswdImg">
                     </span>
-                    <span class="error_next_box" id="pswd1Msg">필수 정보입니다.</span>
+                    <span class="error_next_box"></span>
                 </div>
 
                 <!-- PW2 -->
-                <div class="join_row">
+                <div>
                     <h3 class="join_title"><label for="pswd2">비밀번호 재확인</label></h3>
                     <span class="box int_pass_check">
                         <input type="text" id="pswd2" class="int" maxlength="20">
                         <img src="m_icon_check_disable.png" id="pswd2_img1" class="pswdImg">
                     </span>
-                    <span class="error_next_box" id="pswd2Msg">필수 정보입니다.</span>
+                    <span class="error_next_box"></span>
                 </div>
 
                 <!-- NAME -->
-                <div class="join_row">
+                <div>
                     <h3 class="join_title"><label for="name">이름</label></h3>
                     <span class="box int_name">
                         <input type="text" id="name" class="int" maxlength="20">
                     </span>
-                    <span class="error_next_box" id="nameMsg">필수 정보입니다.</span>
+                    <span class="error_next_box"></span>
                 </div>
 
                 <!-- BIRTH -->
-                <div class="join_row">
-                    <h3 class="join_title"><label for="birth">생년월일</label></h3>
+                <div>
+                    <h3 class="join_title"><label for="yy">생년월일</label></h3>
 
                     <div id="bir_wrap">
                         <!-- BIRTH_YY -->
@@ -96,16 +97,16 @@
                         <!-- BIRTH_DD -->
                         <div id="bir_dd">
                             <span class="box">
-                                <input type="text" id="dd" class="int" maxlength="4" placeholder="일">
+                                <input type="text" id="dd" class="int" maxlength="2" placeholder="일">
                             </span>
                         </div>
 
                     </div>
-                    <span class="error_next_box" id="birthdayMsg">태어난 년도 4자리를 정확하게 입력하세요.</span>    
+                    <span class="error_next_box"></span>    
                 </div>
 
                 <!-- GENDER -->
-                <div class="join_row">
+                <div>
                     <h3 class="join_title"><label for="gender">성별</label></h3>
                     <span class="box gender_code">
                         <select id="gender" class="sel">
@@ -114,24 +115,25 @@
                             <option value="F">여자</option>
                         </select>                            
                     </span>
+                    <span class="error_next_box">필수 정보입니다.</span>
                 </div>
 
                 <!-- EMAIL -->
-                <div class="join_row">
+                <div>
                     <h3 class="join_title"><label for="email">본인확인 이메일<span class="optional">(선택)</span></label></h3>
                     <span class="box int_email">
                         <input type="text" id="email" class="int" maxlength="100" placeholder="선택입력">
                     </span>
-                    <span class="error_next_box" id="emailMsg">이메일 주소를 다시 확인해주세요.</span>    
+                    <span class="error_next_box">이메일 주소를 다시 확인해주세요.</span>    
                 </div>
 
                 <!-- MOBILE -->
-                <div class="join_row">
+                <div>
                     <h3 class="join_title"><label for="phoneNo">휴대전화</label></h3>
                     <span class="box int_mobile">
                         <input type="tel" id="mobile" class="int" maxlength="16" placeholder="전화번호 입력">
                     </span>
-                    <span class="error_next_box" id="mobileMsg">필수 정보입니다.</span>    
+                    <span class="error_next_box"></span>    
                 </div>
 
 
@@ -149,6 +151,6 @@
 
         </div> 
         <!-- wrapper -->
-
+    <script src="main.js"></script>
     </body>
 </html>

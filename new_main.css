@@ -38,7 +38,7 @@ body {
 /* 입력폼 */
 
 
-.join_title {
+h3 {
     margin: 19px 0 8px;
     font-size: 14px;
     font-weight: 700;
@@ -56,10 +56,6 @@ body {
     position: relative;
 }
 
-input {
-    font-family: Dotum,'돋움',Helvetica,sans-serif;    
-}
-
 .int {
     display: block;
     position: relative;
@@ -70,12 +66,16 @@ input {
     font-size: 15px;
 }
 
+input {
+    font-family: Dotum,'돋움',Helvetica,sans-serif;    
+}
+
 .box.int_id {
     padding-right: 110px;
 }
 
 .box.int_pass {
-    padding: 10px 93px 10px 14px;
+    padding-right: 40px;
 }
 
 .box.int_pass_check {
@@ -89,7 +89,6 @@ input {
     right: 13px;
     font-size: 15px;
     color: #8e8e8e;
-    line-height: 18px; 
 }
 
 .pswdImg {
@@ -110,20 +109,18 @@ input {
 
 #bir_yy {
     display: table-cell;
-    table-layout: fixed;
     width: 147px;
+    
 }
 
 #bir_mm {
     display: table-cell;
-    table-layout: fixed;
     width: 147px;
     vertical-align: middle;
 }
 
 #bir_dd {
     display: table-cell;
-    table-layout: fixed;
     width: 147px;
 }
 
@@ -131,17 +128,13 @@ input {
     padding-left: 10px;
 }
 
-.sel {
+select {
     width: 100%;
     height: 29px;
     font-size: 15px;
     background: #fff url(https://static.nid.naver.com/images/join/pc/sel_arr_2x.gif) 100% 50% no-repeat;
     background-size: 20px 8px;
     -webkit-appearance: none;
-
-}
-
-select {
     display: inline-block;
     text-align: start;
     border: none;
@@ -152,22 +145,19 @@ select {
 /* 에러메세지 */
 
 .error_next_box {
-    display: block;
-    margin: 9px 0 -2px;
+    margin-top: 9px;
     font-size: 12px;
-    line-height: 14px;
     color: red;    
     display: none;
 }
 
 #alertTxt {
-    display: inline-block;
     position: absolute;
     top: 19px;
     right: 38px;
     font-size: 12px;
     color: red;
-    visibility: hidden;
+    display: none;
 }
 
 /* 버튼 */
@@ -177,15 +167,13 @@ select {
 }
 
 #btnJoin {
-    color: #fff;
-    background-color: #08a600;
-    display: block;
     width: 100%;
     padding: 21px 0 17px;
-    font-size: 20px;
-    text-align: center;
-    cursor: pointer;
-    font-weight: 400;
     border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #08a600;
+    font-size: 20px;
+    font-weight: 400;
     font-family: Dotum,'돋움',Helvetica,sans-serif;
 }
