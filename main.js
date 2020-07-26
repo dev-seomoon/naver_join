@@ -32,22 +32,22 @@ var error = document.querySelectorAll('.error_next_box');
 /*이벤트 핸들러 연결*/
 
 
-id.addEventListener("change", checkId);
-pw1.addEventListener("change", checkPw);
-pw2.addEventListener("change", comparePw);
-userName.addEventListener("change", checkName);
-yy.addEventListener("change", isBirthCompleted);
-mm.addEventListener("change", isBirthCompleted);
-dd.addEventListener("change", isBirthCompleted);
-gender.addEventListener("change", function() {
+id.addEventListener("focusout", checkId);
+pw1.addEventListener("focusout", checkPw);
+pw2.addEventListener("focusout", comparePw);
+userName.addEventListener("focusout", checkName);
+yy.addEventListener("focusout", isBirthCompleted);
+mm.addEventListener("focusout", isBirthCompleted);
+dd.addEventListener("focusout", isBirthCompleted);
+gender.addEventListener("focusout", function() {
     if(gender.value === "성별") {
         error[5].style.display = "block";
     } else {
         error[5].style.display = "none";
     }
 })
-email.addEventListener("change", isEmailCorrect);
-mobile.addEventListener("change", checkPhoneNum);
+email.addEventListener("focusout", isEmailCorrect);
+mobile.addEventListener("focusout", checkPhoneNum);
 
 
 
@@ -167,10 +167,13 @@ function isBirthRight() {
 function checkAge() {
     if(Number(yy.value) < 1920) {
         error[4].innerHTML = "정말이세요?";
+        error[4].style.display = "block";
     } else if(Number(yy.value) > 2019) {
         error[4].innerHTML = "미래에서 오셨군요. ^^";
+        error[4].style.display = "block";
     } else if(Number(yy.value) > 2005) {
         error[4].innerHTML = "만 14세 미만의 어린이는 보호자 동의가 필요합니다.";
+        error[4].style.display = "block";
     } else {
         error[4].style.display = "none";
     }

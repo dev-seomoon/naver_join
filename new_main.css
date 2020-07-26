@@ -37,6 +37,10 @@ body {
 
 /* 입력폼 */
 
+input:focus {
+    outline: none;
+}
+
 
 h3 {
     margin: 19px 0 8px;
