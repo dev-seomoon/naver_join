@@ -75,8 +75,6 @@ function checkPw() {
     var pwPattern = /[a-zA-Z0-9~!@#$%^&*()_+|<>?:{}]{8,16}/;
     if(pw1.value === "") {
         error[1].innerHTML = "필수 정보입니다.";
-        pwMsg.style.display = "block";
-        pwImg1.src = "m_icon_pass.png";
         error[1].style.display = "block";
     } else if(!pwPattern.test(pw1.value)) {
         error[1].innerHTML = "8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.";
@@ -96,7 +94,7 @@ function checkPw() {
 }
 
 function comparePw() {
-    if(pw2.value === pw1.value) {
+    if(pw2.value === pw1.value && pw2.value != "") {
         pwImg2.src = "m_icon_check_enable.png";
         error[2].style.display = "none";
     } else if(pw2.value !== pw1.value) {
@@ -168,7 +166,7 @@ function checkAge() {
     if(Number(yy.value) < 1920) {
         error[4].innerHTML = "정말이세요?";
         error[4].style.display = "block";
-    } else if(Number(yy.value) > 2019) {
+    } else if(Number(yy.value) > 2020) {
         error[4].innerHTML = "미래에서 오셨군요. ^^";
         error[4].style.display = "block";
     } else if(Number(yy.value) > 2005) {
